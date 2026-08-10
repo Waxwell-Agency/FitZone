@@ -301,7 +301,7 @@
                     android:layout_marginTop="9dp"
                     android:gravity="start|center_vertical"
                     android:paddingStart="18dp"
-                    android:text="?   Quiz de connaissances"
+                    android:text="❓   Quiz de connaissances"
                     android:textAllCaps="false"
                     android:textColor="#17152A"
                     android:textSize="15sp"
