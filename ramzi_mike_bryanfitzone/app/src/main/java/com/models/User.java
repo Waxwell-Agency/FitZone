@@ -1,4 +1,4 @@
-package com.ramzi_mike_bryan.FitZone.models;
+package com.models;
 
 public class User {
 

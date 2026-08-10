@@ -1,4 +1,4 @@
-package com.ramzi_mike_bryan.FitZone.api;
+package com.api;
 
 import com.api.ApiService;
 

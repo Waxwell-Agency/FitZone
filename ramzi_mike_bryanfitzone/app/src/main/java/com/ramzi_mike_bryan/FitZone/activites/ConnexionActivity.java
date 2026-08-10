@@ -13,8 +13,8 @@ import com.ramzi_mike_bryan.FitZone.R;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.ramzi_mike_bryan.FitZone.api.RetrofitClient;
-import com.ramzi_mike_bryan.FitZone.models.User;
+import com.api.RetrofitClient;
+import com.models.User;
 
 import java.util.List;
 
@@ -87,11 +87,8 @@ public class ConnexionActivity extends AppCompatActivity {
                                         Toast.LENGTH_SHORT
                                 ).show();
 
-                                Intent intent = new Intent(
-                                        ConnexionActivity.this,
-                                        AccueilActivity.class
-                                );
-
+                                Intent intent = new Intent(ConnexionActivity.this, AccueilActivity.class);
+                                intent.putExtra("USER_ID", user.getId());
                                 startActivity(intent);
                                 finish();
 

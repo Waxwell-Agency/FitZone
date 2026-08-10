@@ -1,11 +1,12 @@
 package com.api;
 
-import com.ramzi_mike_bryan.FitZone.models.User;
+import com.models.User;
 
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface ApiService {
@@ -17,4 +18,7 @@ public interface ApiService {
     Call<List<User>> getUserByEmail(
             @Query("email") String email
     );
+
+    @GET("users/{id}")
+    Call<User> getUserById(@Path("id") String id);
 }
