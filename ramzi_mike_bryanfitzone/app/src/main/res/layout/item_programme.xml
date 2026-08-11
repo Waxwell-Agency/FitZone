@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    android:orientation="vertical"
+    android:padding="18dp"
+    android:background="@drawable/bg_carte">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:gravity="center"
+            android:text="🏋"
+            android:textSize="27sp"
+            android:background="@drawable/bg_icone_violet_clair"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="14dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/texteNomProgramme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nom du programme"
+                android:textColor="#17152A"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/texteCodeProgramme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Code : FZ101"
+                android:textColor="#77758A"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/texteCoachProgramme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Coach : Marc-André Simard"
+                android:textColor="#77758A"
+                android:textSize="13sp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:text="Actif"
+            android:textColor="#158A62"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_statut_actif"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/boutonVoirProgramme"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:text="Voir le programme"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:backgroundTint="#6534D9"/>
+
+</LinearLayout>

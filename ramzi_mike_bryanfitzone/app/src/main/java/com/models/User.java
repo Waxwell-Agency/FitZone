@@ -1,5 +1,7 @@
 package com.models;
 
+import java.util.List;
+
 public class User {
 
     private String id;
@@ -10,6 +12,7 @@ public class User {
     private String prenom;
     private String telephone;
     private String photoUrl;
+    private List<String> enrolledProgramIds;
 
     public User() {
     }
@@ -45,4 +48,6 @@ public class User {
     public String getPhotoUrl() {
         return photoUrl;
     }
+
+    public List<String> getEnrolledProgramIds() {return enrolledProgramIds;}
 }

@@ -1,6 +1,7 @@
 package com.api;
 
 import com.models.User;
+import com.models.Programme;
 
 import java.util.List;
 
@@ -21,4 +22,8 @@ public interface ApiService {
 
     @GET("users/{id}")
     Call<User> getUserById(@Path("id") String id);
+
+    @GET("programs")
+    Call<List<Programme>> getProgrammes();
+
 }
