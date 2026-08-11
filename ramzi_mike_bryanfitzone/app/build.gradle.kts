@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.ramzi_mike_bryanfitzone"
+    namespace = "com.ramzi_mike_bryan.FitZone"
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
@@ -11,7 +11,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.ramzi_mike_bryanfitzone"
+        applicationId = "com.ramzi_mike_bryan.FitZone"
         minSdk = 29
         targetSdk = 36
         versionCode = 1
@@ -38,6 +38,8 @@ dependencies {
     implementation(libs.appcompat)
     implementation(libs.constraintlayout)
     implementation(libs.material)
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.espresso.core)
     androidTestImplementation(libs.ext.junit)

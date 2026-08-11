@@ -1,4 +1,4 @@
-package com.example.ramzi_mike_bryanfitzone;
+package com.ramzi_mike_bryan.FitZone;
 
 import org.junit.Test;
 

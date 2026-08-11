@@ -1,4 +1,4 @@
-package com.example.ramzi_mike_bryanfitzone;
+package com.ramzi_mike_bryan.FitZone;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.ramzi_mike_bryanfitzone", appContext.getPackageName());
+        assertEquals("com.ramzi_mike_bryan.FitZone", appContext.getPackageName());
     }
 }
