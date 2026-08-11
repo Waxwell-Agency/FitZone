@@ -39,6 +39,7 @@
 
     </LinearLayout>
 
+    <!-- Contenu -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -128,231 +129,23 @@
 
             </HorizontalScrollView>
 
+            <!-- Nombre de programmes -->
             <TextView
                 android:id="@+id/texteNombreProgrammes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
-                android:text="3 programmes"
+                android:text="0 programme"
                 android:textColor="#77758A"
                 android:textSize="14sp"/>
 
-            <!-- Programme 1 -->
-            <LinearLayout
-                android:id="@+id/carteProgrammeMusculation"
+            <!-- Liste dynamique des programmes -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerProgrammes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:orientation="vertical"
-                android:padding="18dp"
-                android:background="@drawable/bg_carte">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-
-                    <TextView
-                        android:layout_width="58dp"
-                        android:layout_height="58dp"
-                        android:gravity="center"
-                        android:text="🏋"
-                        android:textSize="27sp"
-                        android:background="@drawable/bg_icone_violet_clair"/>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_marginStart="14dp"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Prise de masse"
-                            android:textColor="#17152A"
-                            android:textSize="18sp"
-                            android:textStyle="bold"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="3dp"
-                            android:text="Code : FZ101"
-                            android:textColor="#77758A"
-                            android:textSize="13sp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="3dp"
-                            android:text="Coach : Marc Dubois"
-                            android:textColor="#77758A"
-                            android:textSize="13sp"/>
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="10dp"
-                        android:paddingTop="5dp"
-                        android:paddingEnd="10dp"
-                        android:paddingBottom="5dp"
-                        android:text="Actif"
-                        android:textColor="#158A62"
-                        android:textSize="12sp"
-                        android:textStyle="bold"
-                        android:background="@drawable/bg_statut_actif"/>
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Progression"
-                    android:textColor="#77758A"
-                    android:textSize="13sp"/>
-
-                <ProgressBar
-                    android:id="@+id/progressionMusculation"
-                    style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="9dp"
-                    android:layout_marginTop="7dp"
-                    android:max="100"
-                    android:progress="75"
-                    android:progressTint="#6534D9"
-                    android:progressBackgroundTint="#E5E2EC"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:gravity="end"
-                    android:text="75 %"
-                    android:textColor="#6534D9"
-                    android:textStyle="bold"/>
-
-                <Button
-                    android:id="@+id/boutonVoirProgrammeMusculation"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="12dp"
-                    android:text="Voir le programme"
-                    android:textAllCaps="false"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold"
-                    android:backgroundTint="#6534D9"/>
-
-            </LinearLayout>
-
-            <!-- Programme 2 -->
-            <LinearLayout
-                android:id="@+id/carteProgrammePertePoids"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:orientation="vertical"
-                android:padding="18dp"
-                android:background="@drawable/bg_carte">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-
-                    <TextView
-                        android:layout_width="58dp"
-                        android:layout_height="58dp"
-                        android:gravity="center"
-                        android:text="🏃"
-                        android:textSize="27sp"
-                        android:background="@drawable/bg_icone_violet_clair"/>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_marginStart="14dp"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Perte de poids"
-                            android:textColor="#17152A"
-                            android:textSize="18sp"
-                            android:textStyle="bold"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="3dp"
-                            android:text="Code : FZ204"
-                            android:textColor="#77758A"
-                            android:textSize="13sp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="3dp"
-                            android:text="Coach : Sarah Martin"
-                            android:textColor="#77758A"
-                            android:textSize="13sp"/>
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="10dp"
-                        android:paddingTop="5dp"
-                        android:paddingEnd="10dp"
-                        android:paddingBottom="5dp"
-                        android:text="Actif"
-                        android:textColor="#158A62"
-                        android:textSize="12sp"
-                        android:textStyle="bold"
-                        android:background="@drawable/bg_statut_actif"/>
-
-                </LinearLayout>
-
-                <ProgressBar
-                    android:layout_width="match_parent"
-                    android:layout_height="9dp"
-                    android:layout_marginTop="18dp"
-                    android:max="100"
-                    android:progress="40"
-                    android:progressTint="#6534D9"
-                    android:progressBackgroundTint="#E5E2EC"
-                    style="?android:attr/progressBarStyleHorizontal"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:gravity="end"
-                    android:text="40 %"
-                    android:textColor="#6534D9"
-                    android:textStyle="bold"/>
-
-                <Button
-                    android:id="@+id/boutonVoirProgrammePertePoids"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="12dp"
-                    android:text="Voir le programme"
-                    android:textAllCaps="false"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold"
-                    android:backgroundTint="#6534D9"/>
-
-            </LinearLayout>
+                android:nestedScrollingEnabled="false"/>
 
         </LinearLayout>
 
