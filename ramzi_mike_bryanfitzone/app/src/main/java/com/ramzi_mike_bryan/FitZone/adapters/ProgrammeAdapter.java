@@ -21,7 +21,7 @@ public class ProgrammeAdapter
         extends RecyclerView.Adapter<ProgrammeAdapter.ProgrammeViewHolder> {
 
     private final Context context;
-    private final List<Programme> programmes;
+    private List<Programme> programmes;
 
     public ProgrammeAdapter(Context context, List<Programme> programmes) {
         this.context = context;
@@ -72,6 +72,11 @@ public class ProgrammeAdapter
     @Override
     public int getItemCount() {
         return programmes.size();
+    }
+
+    public void mettreAJourListe(List<Programme> nouvelleListe) {
+        programmes = nouvelleListe;
+        notifyDataSetChanged();
     }
 
     public static class ProgrammeViewHolder

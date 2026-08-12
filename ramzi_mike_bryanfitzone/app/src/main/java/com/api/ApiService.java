@@ -2,6 +2,7 @@ package com.api;
 
 import com.models.User;
 import com.models.Programme;
+import com.models.Seance;
 
 import java.util.List;
 
@@ -25,5 +26,8 @@ public interface ApiService {
 
     @GET("programs")
     Call<List<Programme>> getProgrammes();
+
+    @GET("seances")
+    Call<List<Seance>> getSeances();
 
 }

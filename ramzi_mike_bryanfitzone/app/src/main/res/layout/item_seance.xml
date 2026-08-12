@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="14dp"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="18dp"
     android:background="@drawable/bg_carte">
 
     <LinearLayout
@@ -31,45 +31,54 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/texteNomProgramme"
+                android:id="@+id/texteTitreSeance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nom du programme"
+                android:text="Séance"
                 android:textColor="#17152A"
                 android:textSize="17sp"
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/texteCodeProgramme"
+                android:id="@+id/texteDateSeance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Code : FZ101"
-                android:textColor="#77758A"
-                android:textSize="13sp"/>
-
-            <TextView
-                android:id="@+id/texteCoachProgramme"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="Coach : Marc-André Simard"
+                android:text="Date"
                 android:textColor="#77758A"
                 android:textSize="13sp"/>
 
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/texteStatutSeance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:text="Non soumis"
+            android:textColor="#6534D9"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_statut_a_faire"/>
+
     </LinearLayout>
 
-    <Button
-        android:id="@+id/boutonVoirProgramme"
+    <TextView
+        android:id="@+id/texteDescriptionSeance"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginTop="15dp"
-        android:text="Voir le programme"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:backgroundTint="#6534D9"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="Description"
+        android:textColor="#666477"
+        android:textSize="13sp"/>
+
+    <TextView
+        android:id="@+id/texteInstructionsSeance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Instructions"
+        android:textColor="#77758A"
+        android:textSize="13sp"/>
 
 </LinearLayout>
