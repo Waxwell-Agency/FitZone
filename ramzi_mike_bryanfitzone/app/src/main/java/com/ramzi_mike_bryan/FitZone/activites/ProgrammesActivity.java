@@ -8,6 +8,7 @@ import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -56,6 +57,10 @@ public class ProgrammesActivity extends AppCompatActivity {
         TextView navAccueil =
                 findViewById(R.id.navAccueil);
 
+        TextView navProgrammes =
+                findViewById(R.id.navProgrammes);
+
+
         TextView navSeances =
                 findViewById(R.id.navSeances);
 
@@ -69,6 +74,15 @@ public class ProgrammesActivity extends AppCompatActivity {
                 new LinearLayoutManager(this)
         );
 
+        Button boutonTous =
+                findViewById(R.id.boutonTous);
+
+        Button boutonActifs =
+                findViewById(R.id.boutonActifs);
+
+        Button boutonTermines =
+                findViewById(R.id.boutonTermines);
+
         // NAVIGATION
 
         navAccueil.setOnClickListener(v -> {
@@ -80,6 +94,9 @@ public class ProgrammesActivity extends AppCompatActivity {
 
             startActivity(intent);
             finish();
+        });
+        navProgrammes.setOnClickListener(v -> {
+
         });
 
         navQuiz.setOnClickListener(v -> {
@@ -144,6 +161,46 @@ public class ProgrammesActivity extends AppCompatActivity {
         );
 
         chargerUtilisateurConnecte();
+        boutonTous.setOnClickListener(v -> {
+
+            if (adapter != null) {
+                adapter.mettreAJourListe(
+                        new ArrayList<>(
+                                tousLesProgrammesUtilisateur
+                        )
+                );
+
+                mettreAJourNombre(
+                        tousLesProgrammesUtilisateur.size()
+                );
+            }
+        });
+
+        boutonActifs.setOnClickListener(v -> {
+
+            if (adapter != null) {
+                adapter.mettreAJourListe(
+                        new ArrayList<>(
+                                tousLesProgrammesUtilisateur
+                        )
+                );
+
+                mettreAJourNombre(
+                        tousLesProgrammesUtilisateur.size()
+                );
+            }
+        });
+
+        boutonTermines.setOnClickListener(v -> {
+
+            if (adapter != null) {
+                adapter.mettreAJourListe(
+                        new ArrayList<>()
+                );
+
+                mettreAJourNombre(0);
+            }
+        });
     }
 
     private void chargerUtilisateurConnecte() {

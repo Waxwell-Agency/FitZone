@@ -45,21 +45,29 @@ public class SeancesActivity extends AppCompatActivity {
         TextView boutonRetour =
                 findViewById(R.id.boutonRetourSeances);
 
-        programId = getIntent().getStringExtra("programId");
+        // Récupérer le programme sélectionné
+        programId =
+                getIntent().getStringExtra("programId");
 
         String programTitle =
                 getIntent().getStringExtra("programTitle");
 
+        // Afficher le nom du programme
         texteProgramme.setText(
                 "Programme : " + programTitle
         );
 
+        // Préparer la liste
         recyclerSeances.setLayoutManager(
                 new LinearLayoutManager(this)
         );
 
-        boutonRetour.setOnClickListener(v -> finish());
+        // Retour vers la page précédente
+        boutonRetour.setOnClickListener(v -> {
+            finish();
+        });
 
+        // Charger les séances
         chargerSeances();
     }
 
@@ -85,6 +93,8 @@ public class SeancesActivity extends AppCompatActivity {
                             List<Seance> seancesProgramme =
                                     new ArrayList<>();
 
+                            // Garder seulement les séances
+                            // du programme sélectionné
                             for (Seance seance : toutesLesSeances) {
 
                                 if (programId != null
@@ -102,16 +112,25 @@ public class SeancesActivity extends AppCompatActivity {
 
                             recyclerSeances.setAdapter(adapter);
 
-                            texteNombreSeances.setText(
-                                    seancesProgramme.size()
-                                            + " séances"
-                            );
+                            if (seancesProgramme.size() == 1) {
+
+                                texteNombreSeances.setText(
+                                        "1 séance"
+                                );
+
+                            } else {
+
+                                texteNombreSeances.setText(
+                                        seancesProgramme.size()
+                                                + " séances"
+                                );
+                            }
 
                         } else {
 
                             Toast.makeText(
                                     SeancesActivity.this,
-                                    "Erreur lors du chargement",
+                                    "Erreur lors du chargement des séances",
                                     Toast.LENGTH_SHORT
                             ).show();
                         }

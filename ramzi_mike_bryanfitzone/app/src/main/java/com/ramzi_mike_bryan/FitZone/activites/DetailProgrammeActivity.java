@@ -12,12 +12,14 @@ import com.ramzi_mike_bryan.FitZone.R;
 public class DetailProgrammeActivity extends AppCompatActivity {
 
     private String programId;
+    private String programTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_programme);
 
+        // Éléments de la page
         TextView boutonRetour =
                 findViewById(R.id.boutonRetourProgramme);
 
@@ -36,19 +38,40 @@ public class DetailProgrammeActivity extends AppCompatActivity {
         Button boutonVoirSeances =
                 findViewById(R.id.boutonVoirSeances);
 
-        // Récupération des informations envoyées par ProgrammeAdapter
+        Button boutonVoirQuiz =
+                findViewById(R.id.boutonVoirQuiz);
+
+
+        // =====================================
+        // RÉCUPÉRER LE PROGRAMME SÉLECTIONNÉ
+        // =====================================
+
         Intent intent = getIntent();
 
-        programId = intent.getStringExtra("programId");
+        programId =
+                intent.getStringExtra("programId");
 
-        String title = intent.getStringExtra("title");
-        String code = intent.getStringExtra("code");
-        String coach = intent.getStringExtra("coach");
-        String session = intent.getStringExtra("session");
-        String description = intent.getStringExtra("description");
+        programTitle =
+                intent.getStringExtra("title");
 
-        // Affichage des vraies données
-        texteNom.setText(title);
+        String code =
+                intent.getStringExtra("code");
+
+        String coach =
+                intent.getStringExtra("coach");
+
+        String session =
+                intent.getStringExtra("session");
+
+        String description =
+                intent.getStringExtra("description");
+
+
+        // =====================================
+        // AFFICHER LES INFORMATIONS
+        // =====================================
+
+        texteNom.setText(programTitle);
 
         texteCode.setText(
                 code + " • " + session
@@ -58,10 +81,20 @@ public class DetailProgrammeActivity extends AppCompatActivity {
 
         texteDescription.setText(description);
 
-        // Retour
-        boutonRetour.setOnClickListener(v -> finish());
 
-        // Aller vers les séances du programme
+        // =====================================
+        // RETOUR VERS PROGRAMMES
+        // =====================================
+
+        boutonRetour.setOnClickListener(v -> {
+            finish();
+        });
+
+
+        // =====================================
+        // ALLER VERS LES SÉANCES
+        // =====================================
+
         boutonVoirSeances.setOnClickListener(v -> {
 
             Intent intentSeances = new Intent(
@@ -76,10 +109,30 @@ public class DetailProgrammeActivity extends AppCompatActivity {
 
             intentSeances.putExtra(
                     "programTitle",
-                    title
+                    programTitle
             );
 
             startActivity(intentSeances);
+        });
+
+
+        // =====================================
+        // ALLER VERS LES QUIZ
+        // =====================================
+
+        boutonVoirQuiz.setOnClickListener(v -> {
+
+            Intent intentQuiz = new Intent(
+                    DetailProgrammeActivity.this,
+                    QuizActivity.class
+            );
+
+            intentQuiz.putExtra(
+                    "programId",
+                    programId
+            );
+
+            startActivity(intentQuiz);
         });
     }
 }
