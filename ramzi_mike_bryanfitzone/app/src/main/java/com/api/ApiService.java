@@ -3,6 +3,7 @@ package com.api;
 import com.models.User;
 import com.models.Programme;
 import com.models.Seance;
+import com.models.Quiz;
 
 import java.util.List;
 
@@ -29,5 +30,11 @@ public interface ApiService {
 
     @GET("seances")
     Call<List<Seance>> getSeances();
+
+    @GET("quizzes")
+    Call<List<Quiz>> getQuizzes();
+
+    @GET("quizzes/{id}")
+    Call<Quiz> getQuizById(@Path("id") String id);
 
 }
