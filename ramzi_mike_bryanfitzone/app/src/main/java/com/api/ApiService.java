@@ -4,6 +4,7 @@ import com.models.User;
 import com.models.Programme;
 import com.models.Seance;
 import com.models.Quiz;
+import com.models.Aliment;
 
 import java.util.List;
 
@@ -41,5 +42,8 @@ public interface ApiService {
 
     @POST("users")
     Call<User> createUser(@Body User user);
+
+    @GET("aliments")
+    Call<List<Aliment>> getAliments();
 
 }

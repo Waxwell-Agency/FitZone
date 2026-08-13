@@ -148,5 +148,17 @@
     {"id":"11","programId":"6","title":"Séance 1","description":"Circuit poids du corps.","dueDate":"2026-03-24","instructions":"Journal d'entraînement","status":"Non soumis","grade":null,"comment":null,"totalPoints":20,"type":"text"},
     {"id":"12","programId":"6","title":"Séance 2","description":"Défi 30 jours.","dueDate":"2026-04-12","instructions":"Suivi quotidien","status":"Non soumis","grade":null,"comment":null,"totalPoints":20,"type":"file"}
   ],
+  "aliments": [
+    {"id":"1","nom":"Gruau","icone":"🥣","description":"Riche en fibres, favorise une énergie stable en matinée.","calories":150,"moment":"Petit-déjeuner"},
+    {"id":"2","nom":"Banane","icone":"🍌","description":"Source rapide de glucides et de potassium pour l'énergie.","calories":105,"moment":"Avant l'entraînement"},
+    {"id":"3","nom":"Amandes","icone":"🥜","description":"Bonnes graisses et protéines pour une collation rassasiante.","calories":170,"moment":"Collation"},
+    {"id":"4","nom":"Œufs","icone":"🥚","description":"Excellente source de protéines complètes pour bien commencer la journée.","calories":140,"moment":"Petit-déjeuner"},
+    {"id":"5","nom":"Poulet grillé","icone":"🍗","description":"Protéines maigres idéales pour la récupération musculaire.","calories":220,"moment":"Après l'entraînement"},
+    {"id":"6","nom":"Yogourt grec","icone":"🥛","description":"Riche en protéines et en probiotiques, parfait entre les repas.","calories":120,"moment":"Collation"},
+    {"id":"7","nom":"Pomme","icone":"🍎","description":"Collation légère riche en fibres et en antioxydants.","calories":95,"moment":"Collation"},
+    {"id":"8","nom":"Salade de quinoa","icone":"🥗","description":"Repas complet combinant protéines végétales et légumes.","calories":260,"moment":"Dîner"},
+    {"id":"9","nom":"Saumon","icone":"🐟","description":"Riche en oméga-3, excellent pour la récupération et l'inflammation.","calories":280,"moment":"Souper"},
+    {"id":"10","nom":"Avocat","icone":"🥑","description":"Source de bons gras qui favorise la satiété.","calories":160,"moment":"Déjeuner"}
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

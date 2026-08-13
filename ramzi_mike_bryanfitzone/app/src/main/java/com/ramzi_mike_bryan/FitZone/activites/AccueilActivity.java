@@ -71,6 +71,7 @@ public class AccueilActivity extends AppCompatActivity {
 
         Button boutonProgrammes = findViewById(R.id.boutonProgrammes);
         Button boutonQuiz = findViewById(R.id.boutonQuiz);
+        Button boutonConseils = findViewById(R.id.boutonConseils);
 
         TextView navAccueil = findViewById(R.id.navAccueil);
         TextView navProgrammes = findViewById(R.id.navProgrammes);
@@ -97,6 +98,7 @@ public class AccueilActivity extends AppCompatActivity {
 
         boutonProgrammes.setOnClickListener(v -> ouvrirActivite(ProgrammesActivity.class));
         boutonQuiz.setOnClickListener(v -> ouvrirActivite(QuizActivity.class));
+        boutonConseils.setOnClickListener(v -> ouvrirActivite(ConseilsNutritionnelsActivity.class));
 
         navAccueil.setOnClickListener(v -> {});
 

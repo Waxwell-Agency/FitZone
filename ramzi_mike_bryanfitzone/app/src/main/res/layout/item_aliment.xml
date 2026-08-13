@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="14dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="14dp"
+    android:background="@drawable/bg_carte">
+
+    <TextView
+        android:id="@+id/texteIconeAliment"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:gravity="center"
+        android:text="🥣"
+        android:textSize="24sp"
+        android:background="@drawable/bg_icone_violet_clair"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="12dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/texteNomAliment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom de l'aliment"
+            android:textColor="#17152A"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/texteDescriptionAliment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Description"
+            android:textColor="#77758A"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/texteMomentAliment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:padding="6dp"
+            android:text="Moment recommandé"
+            android:textColor="#6534D9"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_statut_a_faire"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/texteCaloriesAliment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="0 kcal"
+        android:textColor="#17152A"
+        android:textSize="13sp"
+        android:textStyle="bold"/>
+
+</LinearLayout>
