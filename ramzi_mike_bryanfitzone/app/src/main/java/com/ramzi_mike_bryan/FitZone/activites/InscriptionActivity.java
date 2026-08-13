@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,7 +26,7 @@ public class InscriptionActivity extends AppCompatActivity {
     private EditText champEmail;
     private EditText champTelephone;
     private EditText champMotDePasse;
-
+    private TextView boutonConnexion;
     private Button boutonInscription;
 
     private ApiService apiService;
@@ -44,12 +45,24 @@ public class InscriptionActivity extends AppCompatActivity {
         champMotDePasse = findViewById(R.id.editPasswordInscription);
 
         boutonInscription = findViewById(R.id.boutonCreerCompte);
+        boutonConnexion = findViewById(R.id.boutonRetourConnexion);
 
         // Retrofit
         apiService = RetrofitClient.getRetrofitInstance()
                 .create(ApiService.class);
 
         boutonInscription.setOnClickListener(v -> inscrireUtilisateur());
+
+        boutonConnexion.setOnClickListener(v -> {
+
+            Intent intent = new Intent(
+                    InscriptionActivity.this,
+                    ConnexionActivity.class
+            );
+
+            startActivity(intent);
+            finish();
+        });
     }
 
     private void inscrireUtilisateur() {

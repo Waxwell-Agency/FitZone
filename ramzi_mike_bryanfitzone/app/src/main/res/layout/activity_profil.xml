@@ -1,87 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#F7F7F7">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mon profil"
+                android:textColor="#17152A"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp"/>
+
+            <ImageView
+                android:id="@+id/imageProfil"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_launcher_foreground"
+                android:contentDescription="Photo de profil"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prénom"
+                android:textColor="#17152A"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/champPrenom"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Prénom"
+                android:inputType="textPersonName"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nom"
+                android:textColor="#17152A"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/champNom"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Nom"
+                android:inputType="textPersonName"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Courriel"
+                android:textColor="#17152A"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/champEmail"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:inputType="textEmailAddress"
+                android:enabled="false"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Téléphone"
+                android:textColor="#17152A"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/champTelephone"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Téléphone"
+                android:inputType="phone"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Photo de profil (URL)"
+                android:textColor="#17152A"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/champPhotoUrl"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="https://..."
+                android:inputType="textUri"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nouveau mot de passe"
+                android:textColor="#17152A"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/champMotDePasse"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Laisser vide pour conserver l'ancien"
+                android:inputType="textPassword"
+                android:layout_marginBottom="20dp"/>
+
+            <Button
+                android:id="@+id/boutonModifierProfil"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Modifier mon profil"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#6534D9"/>
+
+            <Button
+                android:id="@+id/boutonDeconnexion"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="12dp"
+                android:text="Déconnexion"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Navigation inférieure -->
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="24dp">
+        android:layout_height="72dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="5dp"
+        android:background="#FFFFFF">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Mon profil"
-            android:textColor="#17152A"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="24dp"/>
-
-        <ImageView
-            android:id="@+id/imageProfil"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_launcher_foreground"
-            android:contentDescription="Photo de profil"
-            android:layout_marginBottom="20dp"/>
-
-        <TextView
-            android:id="@+id/texteNom"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Nom Prénom"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:textColor="#17152A"
+            android:id="@+id/navAccueil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center"
-            android:layout_marginBottom="20dp"/>
+            android:text="⌂&#10;Accueil"
+            android:textColor="#8B8997"
+            android:textSize="12sp"/>
 
         <TextView
-            android:id="@+id/texteUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Username"
-            android:textSize="16sp"
-            android:textColor="#555555"
-            android:layout_marginBottom="12dp"/>
+            android:id="@+id/navProgrammes"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="▣&#10;Programmes"
+            android:textColor="#8B8997"
+            android:textSize="12sp"/>
 
         <TextView
-            android:id="@+id/texteEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Email"
-            android:textSize="16sp"
-            android:textColor="#555555"
-            android:layout_marginBottom="12dp"/>
+            android:id="@+id/navSeances"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="▦&#10;Séances"
+            android:textColor="#8B8997"
+            android:textSize="12sp"/>
 
         <TextView
-            android:id="@+id/texteTelephone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Téléphone"
-            android:textSize="16sp"
-            android:textColor="#555555"
-            android:layout_marginBottom="24dp"/>
+            android:id="@+id/navQuiz"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="❓&#10;Quiz"
+            android:textColor="#8B8997"
+            android:textSize="12sp"/>
 
-        <Button
-            android:id="@+id/boutonModifierProfil"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:text="Modifier mon profil"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/boutonDeconnexion"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginTop="12dp"
-            android:text="Déconnexion"
-            android:textAllCaps="false"/>
+        <TextView
+            android:id="@+id/navProfil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="○&#10;Profil"
+            android:textColor="#6534D9"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
 
     </LinearLayout>
 
-</ScrollView>
+</LinearLayout>
