@@ -67,17 +67,17 @@
 
         <!-- Nom d'utilisateur -->
 
+        <!-- Courriel -->
+
         <EditText
             android:id="@+id/editUsernameInscription"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginTop="12dp"
+            android:background="@drawable/bg_champ_recherche"
             android:hint="Nom d'utilisateur"
             android:inputType="text"
-            android:padding="16dp"
-            android:background="@drawable/bg_champ_recherche"/>
-
-        <!-- Courriel -->
+            android:padding="16dp" />
 
         <EditText
             android:id="@+id/editEmailInscription"
