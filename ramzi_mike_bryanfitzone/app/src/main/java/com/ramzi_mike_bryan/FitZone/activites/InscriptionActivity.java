@@ -26,9 +26,10 @@ public class InscriptionActivity extends AppCompatActivity {
     private EditText champEmail;
     private EditText champTelephone;
     private EditText champMotDePasse;
+    private EditText champConfirmationMotDePasse;
     private TextView boutonConnexion;
     private Button boutonInscription;
-
+    private EditText champPhotoUrl;
     private ApiService apiService;
 
     @Override
@@ -43,6 +44,8 @@ public class InscriptionActivity extends AppCompatActivity {
         champEmail = findViewById(R.id.editEmailInscription);
         champTelephone = findViewById(R.id.editTelephoneInscription);
         champMotDePasse = findViewById(R.id.editPasswordInscription);
+        champConfirmationMotDePasse = findViewById(R.id.editConfirmationPasswordInscription);
+        champPhotoUrl = findViewById(R.id.editPhotoUrlInscription);
 
         boutonInscription = findViewById(R.id.boutonCreerCompte);
         boutonConnexion = findViewById(R.id.boutonRetourConnexion);
@@ -73,6 +76,8 @@ public class InscriptionActivity extends AppCompatActivity {
         String email = champEmail.getText().toString().trim();
         String telephone = champTelephone.getText().toString().trim();
         String motDePasse = champMotDePasse.getText().toString().trim();
+        String confirmationMotDePasse = champConfirmationMotDePasse.getText().toString().trim();
+        String photoUrl = champPhotoUrl.getText().toString().trim();
 
         // Vérification des champs
         if (username.isEmpty() ||
@@ -90,6 +95,16 @@ public class InscriptionActivity extends AppCompatActivity {
 
             return;
         }
+        if (!motDePasse.equals(confirmationMotDePasse)) {
+
+            Toast.makeText(
+                    this,
+                    "Les mots de passe ne correspondent pas.",
+                    Toast.LENGTH_SHORT
+            ).show();
+
+            return;
+        }
 
         // Création du nouvel utilisateur
         User nouvelUtilisateur = new User();
@@ -102,8 +117,7 @@ public class InscriptionActivity extends AppCompatActivity {
         nouvelUtilisateur.setPassword(motDePasse);
 
         // Valeurs par défaut
-        nouvelUtilisateur.setPhotoUrl("");
-        nouvelUtilisateur.setEnrolledProgramIds(new java.util.ArrayList<>());
+        nouvelUtilisateur.setPhotoUrl(photoUrl);        nouvelUtilisateur.setEnrolledProgramIds(new java.util.ArrayList<>());
         nouvelUtilisateur.setCompletedSeanceIds(new java.util.ArrayList<>());
         nouvelUtilisateur.setQuizResults(new java.util.ArrayList<>());
 
