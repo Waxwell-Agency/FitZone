@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
 
-    private static final String BASE_URL = "http://192.168.2.27:3000/";
+    private static final String BASE_URL = "https://itchy-flowers-search.loca.lt/";
 
     private static Retrofit retrofit;
 

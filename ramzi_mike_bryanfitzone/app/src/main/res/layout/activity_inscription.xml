@@ -110,6 +110,20 @@
             android:textColorHint="#9997A5"
             android:background="@drawable/bg_champ_recherche"/>
 
+        <!-- Photo de profil (URL) -->
+
+        <EditText
+            android:id="@+id/editPhotoUrlInscription"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:hint="URL de la photo de profil (optionnel)"
+            android:inputType="textUri"
+            android:padding="16dp"
+            android:textColor="#17152A"
+            android:textColorHint="#9997A5"
+            android:background="@drawable/bg_champ_recherche"/>
+
         <!-- Mot de passe -->
 
         <EditText
