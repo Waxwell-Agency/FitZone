@@ -30,6 +30,9 @@
             android:name=".activites.QuizActivity"
             android:exported="false" />
         <activity
+            android:name=".activites.PassationQuizActivity"
+            android:exported="false" />
+        <activity
             android:name=".activites.ConseilsNutritionnelsActivity"
             android:exported="false" />
         <activity
