@@ -12,6 +12,7 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
@@ -45,5 +46,11 @@ public interface ApiService {
 
     @GET("aliments")
     Call<List<Aliment>> getAliments();
+
+    @PUT("users/{id}")
+    Call<User> updateUser(
+            @Path("id") String id,
+            @Body User user
+    );
 
 }

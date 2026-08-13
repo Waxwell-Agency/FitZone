@@ -118,6 +118,16 @@ public class ConnexionActivity extends AppCompatActivity {
                     });
         });
 
+        boutonInscription.setOnClickListener(v -> {
+
+            Intent intent = new Intent(
+                    ConnexionActivity.this,
+                    InscriptionActivity.class
+            );
+
+            startActivity(intent);
+        });
+
         RetrofitClient.getApiService().getUsers().enqueue(new Callback<List<User>>() {
 
             @Override
